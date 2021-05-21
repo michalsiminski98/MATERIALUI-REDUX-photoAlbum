@@ -1,1 +1,1 @@
-## photo album
+## photo album - redux 
