@@ -1,16 +1,15 @@
-import { Button, CircularProgress } from "@material-ui/core";
+import Navigation from "../components/organisms/Navigation/Navigation";
+import GlobalStyle from "../styles/GlobalStyles";
+import MainTemplate from "./MainTemplate";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function Root() {
   return (
-    <>
-      <CircularProgress />
-      <Button variant="contained" color="primary">
-        Primary
-      </Button>
-      <ul>
-        <li>asd</li>
-      </ul>
-    </>
+    <Router>
+      <GlobalStyle />
+      <Navigation />
+      <MainTemplate />
+    </Router>
   );
 }
 
