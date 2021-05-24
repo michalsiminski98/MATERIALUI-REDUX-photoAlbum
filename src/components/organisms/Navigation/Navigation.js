@@ -5,16 +5,16 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import HomeIcon from "../../atoms/HomeIcon/HomeIcon";
+import { StyledNavLink } from "./Navigation.style";
 import useStyles from "./NavigationUseStyles";
 
 const Navigation = () => {
   const classes = useStyles();
   return (
-    <AppBar position="static" color="secondary">
+    <AppBar position="fixed" color="secondary">
       <Toolbar>
-        <Link to="/">
+        <StyledNavLink to="/">
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -23,16 +23,19 @@ const Navigation = () => {
           >
             <HomeIcon />
           </IconButton>
-        </Link>
+        </StyledNavLink>
         <Typography variant="h6" className={classes.title}>
           Photo Album APP
         </Typography>
-        <Link to="/">
+        <StyledNavLink to="/">
           <Button color="inherit">Home</Button>
-        </Link>
-        <Link to="/login">
+        </StyledNavLink>
+        <StyledNavLink to="/login">
           <Button color="inherit">Log in</Button>
-        </Link>
+        </StyledNavLink>
+        <StyledNavLink to="/add">
+          <Button color="inherit">Add new photo</Button>
+        </StyledNavLink>
       </Toolbar>
     </AppBar>
   );
