@@ -2,12 +2,11 @@ import { connect } from "react-redux";
 import { StyledGridContainer, StyledGridItem, Img } from "./Home.style";
 
 const Home = ({ images }) => {
-  console.log(images);
   return (
     <StyledGridContainer container>
-      {images.map(({ id, link, name }) => (
+      {images.map(({ id, img, name }) => (
         <StyledGridItem item xs={12} md={6} lg={3} key={id}>
-          <Img src={link} alt={name} />
+          <Img src={img} alt={name} />
         </StyledGridItem>
       ))}
     </StyledGridContainer>

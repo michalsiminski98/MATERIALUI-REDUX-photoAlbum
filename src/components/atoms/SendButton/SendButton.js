@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SelectButton = () => {
+const SelectButton = ({ onSubmit }) => {
   const classes = useStyles();
   return (
     <Button
@@ -14,6 +14,7 @@ const SelectButton = () => {
       color="secondary"
       className={classes.button}
       endIcon={<Icon>send</Icon>}
+      onClick={onSubmit}
     >
       Send
     </Button>

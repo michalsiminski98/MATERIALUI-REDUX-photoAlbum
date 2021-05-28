@@ -1,10 +1,11 @@
 import * as ActionTypes from "./imageTypes";
 
-export const addImage = (imageName, imageLink) => ({
+export const addImage = (imageName, imageDescribe, imageImg) => ({
   type: ActionTypes.ADD,
   payload: {
     name: imageName,
-    link: imageLink,
+    describe: imageDescribe,
+    img: imageImg,
   },
 });
 
