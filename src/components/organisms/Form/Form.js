@@ -5,6 +5,7 @@ import SendButton from "../../atoms/SendButton/SendButton";
 import FormField from "../../molecules/FormField/FormField";
 import PhotoField from "../../molecules/PhotoField/PhotoField";
 import { Wrapper } from "./Form.style";
+import FormTitle from "../../atoms/FormTitle/FormTitle";
 
 const initialValues = {
   name: "",
@@ -50,7 +51,6 @@ const Form = ({ addImage }) => {
       : setFormValidation((prevState) => ({ ...prevState, img: true }));
 
     console.log(formValidation);
-
     if (formValidation.name || formValidation.describe || formValidation.img) {
       return;
     } else {
@@ -61,6 +61,7 @@ const Form = ({ addImage }) => {
 
   return (
     <Wrapper>
+      <FormTitle title="Add photo" />
       <FormField
         placeholder="name"
         value={formValues.name}
