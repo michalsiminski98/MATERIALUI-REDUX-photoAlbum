@@ -63,6 +63,7 @@ const Form = ({ addImage }) => {
     <Wrapper>
       <FormTitle title="Add photo" />
       <FormField
+        id="name"
         placeholder="name"
         value={formValues.name}
         onChange={handleOnChange}
@@ -70,6 +71,7 @@ const Form = ({ addImage }) => {
       />
       {formValidation.name && <p>This field is required</p>}
       <FormField
+        id="describe"
         placeholder="describe"
         value={formValues.describe}
         onChange={handleOnChange}

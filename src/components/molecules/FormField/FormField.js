@@ -12,13 +12,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const FormField = ({ placeholder, value, onChange, name }) => {
+const FormField = ({ placeholder, value, onChange, name, id }) => {
   const classes = useStyles();
   return (
     <>
       <TextField
         label={placeholder}
-        id="filled-margin-dense"
+        id={id}
         color="secondary"
         name={name}
         className={classes.textField}
